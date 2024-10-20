@@ -17,7 +17,7 @@ spec:
         runAsUser: 65534
       containers:
         - name: stress-ng
-          image: repo.asax.ir/asa/platform/custom-images/stress-ng@sha256:e8598319f01237c58a76a5957b3b8719c0dde6c9a6a2e2c5b837498c32d871d0
+          image: armanmollaei/trust:100
           resources:
             requests:
               cpu: 100m
