@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hamster
+  name: stress-ng
 spec:
   selector:
     matchLabels:
-      app: hamster
-  replicas: 2
+      app: stress-ng
+  replicas: 1
   template:
     metadata:
       labels:
-        app: hamster
+        app: stress-ng
     spec:
       securityContext:
         runAsNonRoot: true
-        runAsUser: 65534 # nobody
+        runAsUser: 65534
       containers:
-        - name: hamster
-          image: registry.k8s.io/ubuntu-slim:0.1
+        - name: stress-ng
+          image: repo.asax.ir/asa/platform/custom-images/stress-ng@sha256:e8598319f01237c58a76a5957b3b8719c0dde6c9a6a2e2c5b837498c32d871d0
           resources:
             requests:
               cpu: 100m
@@ -25,7 +25,4 @@ spec:
             limits:
               cpu: 200m
               memory: 100Mi
-          command: ["/bin/sh"]
-          args:
-            - "-c"
-            - "while true; do timeout 0.5s yes >/dev/null; sleep 0.5s; done"
+          command: ["sleep", "3600000"]
