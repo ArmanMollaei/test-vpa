@@ -25,9 +25,8 @@ spec:
             limits:
               cpu: 200m
               memory: 100Mi
-        command: ["/bin/sh"]
+          command: ["/bin/sh"]
           args:
             - "-c"
             - |
-               cd /tmp && stress-ng --cpu $(nproc) --cpu-load 80 --timeout 120 --metrics-brief && sleep 3600000
-
+              cd /tmp && stress-ng --cpu $(nproc) --cpu-load 80 --timeout 120 --metrics-brief && sleep 3600000
