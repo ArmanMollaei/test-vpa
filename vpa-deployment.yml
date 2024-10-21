@@ -29,4 +29,4 @@ spec:
           args:
             - "-c"
             - |
-              cd /tmp && stress-ng --cpu $(nproc) --cpu-load 80 --timeout 120 --metrics-brief && sleep 3600000
+              cd /tmp && stress-ng --cpu $(nproc) --cpu-load 80 --timeout 1200 --metrics-brief && sleep 3600000
