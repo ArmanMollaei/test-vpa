@@ -21,10 +21,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 25Mi
+              memory: 100Mi
             limits:
               cpu: 200m
-              memory: 50Mi
+              memory: 200Mi
           command: ["/bin/sh"]
           args:
             - "-c"
