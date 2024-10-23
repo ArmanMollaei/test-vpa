@@ -20,10 +20,10 @@ spec:
           image: armanmollaei/trust:100
           resources:
             requests:
-              cpu: 50m
+              cpu: 100m
               memory: 25Mi
             limits:
-              cpu: 100m
+              cpu: 200m
               memory: 50Mi
           command: ["/bin/sh"]
           args:
